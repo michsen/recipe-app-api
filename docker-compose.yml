@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: .
+      args:
+        - DEV=true
+    ports:
+      - "8000:8000"
+    volumes: # code which runs inside the container get's diretcly upodated and container doesn't need to be newly build
+      - ./app:/app
+    command: # kann überschrieben werden mit docker-compose run ...
+      sh -c "python manage.py runserver 0.0.0.0:8000"

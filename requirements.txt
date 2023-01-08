@@ -1,0 +1,2 @@
+Django>=3.2.4,<3.3 # always upgrade patch versions (bug fixes, etc.), but preventing upgrading to next minor version.
+djangorestframework>=3.12.4,<3.13
